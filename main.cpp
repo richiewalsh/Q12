@@ -26,8 +26,10 @@ private:
 RGBLed::RGBLed (PinName redpin, PinName greenpin, PinName bluepin)
     : _redpin(redpin), _greenpin(greenpin), _bluepin(bluepin)
 {
-    //50Hz PWM clock default a bit too low, go to 2000Hz (less flicker)
-    _redpin.period(0.0005);
+    // Setting Resolution based on Disco -L4S5I documentation for pins used
+    _redpin.period(0.000001);
+    _greenpin.period(0.00001);
+    _greenpin.period(0.00001);
 }
 
 void RGBLed::write(float red,float green, float blue)
