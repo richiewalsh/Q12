@@ -78,7 +78,7 @@ int main() {
             myRGBled.write(0.0, 0.0, 1.0);
 
         }
-        // In case of equal acceleration in all axes, turn led off
+        // In case of equal acceleration in two or more axes, turn led off
         else{
 
             myRGBled.write(0.0, 0.0, 0.0);
